@@ -23,7 +23,11 @@ CREATE TABLE news (
 );
 
 
-
+CREATE TABLE IF NOT EXISTS `product` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` text,
+  PRIMARY KEY (`id`)
+);
 
 
 
