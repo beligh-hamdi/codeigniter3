@@ -1,1 +1,5 @@
-# Created by .ignore support plugin (hsz.mobi)
+## Directory-based project format:
+.idea/
+vendor/
+composer.lock
+bower_components/

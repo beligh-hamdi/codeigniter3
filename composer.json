@@ -1,0 +1,12 @@
+{
+    "name": "creatixplus/ci",
+    "authors": [
+        {
+            "name": "Beligh HAMDI",
+            "email": "beligh.hamdi@gmail.com"
+        }
+    ],
+    "require": {
+        "codeigniter/framework": "^3.0"
+    }
+}
