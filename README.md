@@ -1,18 +1,31 @@
-CodeIgniter 3 Application
+#CodeIgniter 3 Application
 
-Require:
+#Require:
 
-NodeJS
+#NodeJS
 
 npm install -g bower
 
-Composer
+#Composer
 
-Install:
-
+#Install:
 composer install
-
 bower install
+
+#Database
+CREATE TABLE news (
+        id int(11) NOT NULL AUTO_INCREMENT,
+        title varchar(128) NOT NULL,
+        slug varchar(128) NOT NULL,
+        text text NOT NULL,
+        PRIMARY KEY (id),
+        KEY slug (slug)
+);
+
+
+
+
+
 
 
 References:
