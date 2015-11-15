@@ -1,11 +1,17 @@
 CodeIgniter 3 Application
 
 Require:
-NodeJS npm install -g bower
+
+NodeJS
+
+npm install -g bower
+
 Composer
 
 Install:
+
 composer install
+
 bower install
 
 
