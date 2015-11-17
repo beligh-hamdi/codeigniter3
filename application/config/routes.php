@@ -65,6 +65,8 @@ $route["api/v1/product"]["post"]          = "api/v1/product/create";
 $route["api/v1/product/(:num)"]["put"]    = "api/v1/product/update/$1";
 $route["api/v1/product/(:num)"]["delete"] = "api/v1/product/delete/$1";
 
+$route['register'] = 'login/register';
+$route['logout'] = 'login/logout';
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
