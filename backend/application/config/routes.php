@@ -56,10 +56,12 @@ $route['pages/(:any)'] = 'pages/view/$1';
 $route['member'] = 'member';
 
 
-/*
-$route['news/create'] = 'news/create';
-$route['news/(:any)'] = 'news/view/$1';
-$route['news'] = 'news';
+$route['books/create'] = 'book/create';
+$route['books/view/(:any)'] = 'book/view/$1';
+$route['books/edit/(:any)'] = 'book/edit/$1';
+$route['books/delete/(:any)'] = 'book/delete/$1';
+$route['books'] = 'book';
+
 
 
 /*
@@ -75,5 +77,3 @@ $route['logout'] = 'login/logout';
 */
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
-
-//$route['admin'] = 'admin/dashboard';

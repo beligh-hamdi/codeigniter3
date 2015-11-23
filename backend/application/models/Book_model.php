@@ -2,22 +2,50 @@
 
 Class Book_Model extends CI_Model
 {
+
+    private  $table_name = 'books';
+
+
+
     function __construct()
     {
-        // Call the Model constructor
         parent::__construct();
     }
 
 
-    function get_all()
+    public function get($id = 0)
     {
-        $this->db->select('*');
-        $this->db->from('books');
-        $query = $this->db->get();
-        $result = $query->result();
-
-        return $result;
+        if ($id === 0)
+        {
+            $query = $this->db->get_where($this->table_name);
+            return $query->result_array();
+        }
+        $query = $this->db->get_where($this->table_name, array('id' => $id));
+        return $query->row();
     }
+
+    public function set($id = 0)
+    {
+        $data = array(
+            'title' => $this->input->post('title'),
+            'description' => $this->input->post('description'),
+            'image' => $this->input->post('image'),
+        );
+        if ($id === 0) {
+            return $this->db->insert($this->table_name, $data);
+        }
+        else {
+            $this->db->where('id', $id);
+            return $this->db->update($this->table_name, $data);
+        }
+    }
+
+    public function delete($id){
+        $this->db->where('id', $id);
+        return $this->db->delete($this->table_name);
+    }
+
+
 
 
 
